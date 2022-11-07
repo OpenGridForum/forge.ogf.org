@@ -1,0 +1,984 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- title -->
+
+
+<!-- bread crumb -->
+
+
+<!-- content -->
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/go/projects.ggf-editor/discussion.rec_ws_naming_specification.topc4057 at Sun, 06 Nov 2022 09:02:56 GMT
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <title>SourceForge : Post</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  <link rel="stylesheet" type="text/css" href="../../../css/styles_new.css" />
+  <link rel="shortcut icon" href="../../../sf-images/icons/favicon.ico" />
+  <script language="JavaScript" src="../../js/sf_functions.js" type="text/javascript"></script>
+  
+  
+  
+  
+</head>
+
+  <body>
+
+
+<!-- SourceForge masthead begin -->
+
+
+<script type="text/javascript" src="../../../sf-help/RoboHelp_CSH.js"></script>
+<script type="text/javascript">
+                      var helpRoot = '/sf-help/en/index.htm>HelpWin';
+    
+    // show help for a topic
+    function showTopicHelp(topicId) {
+	// First, close the help menu
+	closeMenu(activeButton);
+	RH_ShowHelp(0, helpRoot, HH_HELP_CONTEXT, topicId);
+    }
+
+    // show help for a topic
+    function showTopicHelpDirectly(topicId) {
+	RH_ShowHelp(0, helpRoot, HH_HELP_CONTEXT, topicId);
+    }
+
+    // show the help table of contents
+    function showHelpContents() {
+	// First, close the help menu
+	closeMenu(activeButton);
+	RH_ShowHelp(0, helpRoot, HH_DISPLAY_TOC, 0);
+    }
+
+    // show the help index
+    function showHelpIndex() {
+	// First, close the help menu
+	closeMenu(activeButton);
+	RH_ShowHelp(0, helpRoot, HH_DISPLAY_INDEX, 0);
+    }
+
+    // show the help index (not from a menu)
+    function showHelpIndexFromLink() {
+	RH_ShowHelp(0, helpRoot, HH_DISPLAY_INDEX, 0);
+    }
+</script>
+
+<div id="ProjectMenu" class="menu">
+    <a class="menuItem" href="../../sfmain/do/myProjectsd3a8.html?selectedTab=my">My Projects</a>
+    <a class="menuItem" href="../../sfmain/do/myProjectsa641.html?selectedTab=all">All Projects</a>
+</div>
+
+<div id="SearchMenu" class="menu">
+  <a class="menuItem" href="../../search/do/quickJump.html" onClick="window.open('../../search/do/quickJump.html', 'quickjumpwindow', 'width=540,height=263'); closeMenu(activeButton); return false">Quick Jump</a>
+  <a class="menuItem" id="search" href="../../search/do/search.html">Search</a>
+</div>
+
+<div id="HelpMenu2" class="menu">
+<a class="menuItem" href="../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge  Help</a>
+
+    <a class="menuItem" href="javascript:showTopicHelp(146)">Help for this Page</a>
+<a class="menuItem" href="javascript:showHelpContents()">Help Contents</a>
+<a class="menuItem" href="javascript:showHelpIndex()">Help Index</a>
+<a class="menuItem" href="../../../sf-help/en/doc/User_Guide.pdf">User Guide</a>
+<div class="menuItemSep"></div>
+<a class="menuItem" href="../../global/do/about.html" onclick="javascript:closeMenu(activeButton); window.open('../../global/do/about.html','sfpabout','height=450,width=600'); return false;">About SourceForge</a>
+</div>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="mastHeadBackground">
+ <tr>
+  <td>
+   <table width="300" border="0" cellpadding="0" cellspacing="0" class="mastHeadLink">
+     <tr class="mastHeadLinkSpacing">
+       <td nowrap="nowrap" valign="middle"><a href="../../sfmain/do/home.html" target="_top"><img src="../../../sf-images/masthead/logo-custom.gif" border="0" align="absmiddle"><img src="../../../ogf-it/gf_masthead.gif" border="0" align="absmiddle"></a></td>
+                    <td nowrap="nowrap" class="mastHeadLink"><a href="../../sfmain/do/home.html" target="_top">Home</a></td>
+       <td nowrap="nowrap" class="mastHeadLinkSpacing"> </td>
+                      <td nowrap="nowrap" class="mastHeadLink"><a href="../../sfmain/do/listProjects.html" target="_top">Projects</a></td>
+       <td nowrap="nowrap" class="mastHeadLinkSpacing"> </td>
+               <td nowrap="nowrap" class="mastHeadLink"><a href="#" onclick="return buttonClick(this, 'SearchMenu');">Search<img src="../../../sf-images/masthead/dropdown.gif" width="7" height="4" hspace="2" border="0"></a></td>
+     
+          
+     
+     </tr>
+   </table>
+  </td>
+  <td align="right">
+    <table border="0" cellspacing="0" cellpadding="0" class="mastHeadLink">
+      <tr class="mastHeadLink">
+                              <form action="https://forge.ogf.org/sf/sfmain/do/login" method="POST" id="globalLogin" name="login">
+<INPUT type="HIDDEN" name="sfsubmit">
+
+              <input type="hidden" name="returnToUrl" value="http://localhost:8080/sf/go/projects.ggf-editor/discussion.rec_ws_naming_specification.topc4057"/>
+              <td nowrap="nowrap">User</td>
+              <td nowrap="nowrap"><input type="text" name="username" class="inputfield" size="8"/></td>
+              <td nowrap="nowrap">Password</td>
+              <td nowrap="nowrap"><input type="password" name="password" class="inputfield" size="8" onkeypress="javascript:submitLoginOnEnter(event)" /></td>
+              <td nowrap="nowrap"><a href="javascript:submitForm(document.getElementById('globalLogin'), 'submit');">Log In</a></td>
+            </form>
+            <td nowrap="nowrap"><img src="../../../sf-images/masthead/vertical_line.gif" width="1" height="19" hspace="4"></td>
+                    <td nowrap="nowrap"><a href="#" onclick="return buttonClick(this, 'HelpMenu2');">Help<img src="../../../sf-images/masthead/dropdown.gif" width="7" height="4" hspace="2" border="0"></a></a></td>
+              </tr>
+    </table>
+  </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="black"><img src="../../../sf-images/misc/pixel.gif" width="1" height="1"></td>
+  </tr>
+</table>
+
+<!-- SourceForge masthead end -->
+
+<!-- SourceForge buttonbar begin -->
+<table class="TopMenu">
+    <tr class="ButtonRow">
+        <td class="VerticalSeparatorNoBorder"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+                   <td class="Button " onclick="window.location = '../../projects/ggf-editor.html'; return false;"><a href="../../projects/ggf-editor.html" target="_top"><img src="../../../sf-images/project/project-homeicon.gif" width="25" height="20" border="0"><br>Project&nbsp;Home</a></td>
+                  <td class="VerticalSeparator"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+                             <td class="Button " onclick="window.location = '../../tracker/do/listTrackers/projects.ggf-editor/tracker.html'; return false;"><a href="../../tracker/do/listTrackers/projects.ggf-editor/tracker.html" target="_top"><img src="../../../sf-images/project/project-trackericon.gif" width="25" height="20" border="0"><br>Tracker</a></td>
+                  <td class="VerticalSeparator"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+                             <td class="Button " onclick="window.location = '../../docman/do/listDocuments/projects.ggf-editor/docman.html'; return false;"><a href="../../docman/do/listDocuments/projects.ggf-editor/docman.html" target="_top"><img src="../../../sf-images/project/project-documentsicon.gif" width="25" height="20" border="0"><br>Documents</a></td>
+                  <td class="VerticalSeparator"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+                             <td class="Button " onclick="window.location = '../../taskmgr/do/viewSummary/projects.ggf-editor/taskmgr.html'; return false;"><a href="../../taskmgr/do/viewSummary/projects.ggf-editor/taskmgr.html" target="_top"><img src="../../../sf-images/project/project-tasksicon.gif" width="25" height="20" border="0"><br>Tasks</a></td>
+                  <td class="VerticalSeparator"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+                             <td class="Button " onclick="window.location = '../../scm/do/listRepositories/projects.ggf-editor/scm.html'; return false;"><a href="../../scm/do/listRepositories/projects.ggf-editor/scm.html" target="_top"><img src="../../../sf-images/project/project-scmicon.gif" width="25" height="20" border="0"><br>Source&nbsp;Code</a></td>
+                                    <td class="SelectedLeft"><img src="../../../sf-images/misc/pixel.gif" border="0" height="1" width="4"></td>
+           <td class="Button Selected" onclick="window.location = '../../discussion/do/listForums/projects.ggf-editor/discussion.html'; return false;"><a href="../../discussion/do/listForums/projects.ggf-editor/discussion.html" target="_top"><img src="../../../sf-images/project/project-forumsicon.gif" width="25" height="20" border="0"><br>Discussions</a></td>
+                 <td class="SelectedRight"><img src="../../../sf-images/misc/pixel.gif" border="0" height="1" width="4"></td>
+                 <td class="VerticalSeparatorNoBorder"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+
+                             <td class="Button " onclick="window.location = '../../frs/do/viewSummary/projects.ggf-editor/frs.html'; return false;"><a href="../../frs/do/viewSummary/projects.ggf-editor/frs.html" target="_top"><img src="../../../sf-images/project/project-releasesicon.gif" width="25" height="20" border="0"><br>File Releases</a></td>
+                  <td class="VerticalSeparator"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+                             <td class="Button " onclick="window.location = '../../wiki/do/viewPage/projects.ggf-editor/wiki/HomePage.html'; return false;"><a href="../../wiki/do/viewPage/projects.ggf-editor/wiki/HomePage.html" target="_top"><img src="../../../sf-images/project/project-wikiicon.gif" width="25" height="20" border="0"><br>Wiki</a></td>
+                  <td class="VerticalSeparator"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+                             <td class="Button " onclick="window.location = '../../sfmain/do/projectAdmin/projects-2.html'; return false;"><a href="../../sfmain/do/projectAdmin/projects-2.html" target="_top"><img src="../../../sf-images/project/project-projectadminicon.gif" width="25" height="20" border="0"><br>Project&nbsp;Admin</a></td>
+                  <td class="VerticalSeparator"><img src="../../../sf-images/misc/white.gif" border="0" height="40" width="1"></td>
+                           <td class="ButtonEnd"></td>
+             </tr>
+
+  <tr class="ShadowRow">
+        
+                  <td colspan="10"></td>
+            <td class="SelectedLeft"></td>
+      <td class="Selected"></td>
+      <td class="SelectedRight"></td>
+              <td colspan="8"></td>
+  </tr>
+  </table>
+
+<!-- SourceForge buttonbar end -->
+
+<!-- SourceForge content-area begin -->
+<div class="contentArea">
+
+<!-- SourceForge crumbs begin -->
+<div style="padding-bottom: 2px;">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+  <td align="left">
+    <span class="mainnavHeader"><strong class="ProjectProminent">Project: Editor</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="discussion.html">Discussion</a>&nbsp;&gt;&nbsp;<a href="discussion-45.html">REC:WS-Naming Specification</a>&nbsp;&gt;&nbsp;<a href="discussion.rec_ws_naming_specification-3.html">Should not use [MetaData] to identify resources</a>&nbsp;&gt;&nbsp;</span><strong>List of Posts</strong>
+  </td>
+</tr>
+</table>
+</div>
+<!-- SourceForge crumbs end -->
+
+<!-- SourceForge messages begin -->
+
+
+
+
+
+
+
+<div style="padding-bottom: 2px; padding-top: 6px;">
+
+
+
+</div>
+<!-- SourceForge messages end -->
+
+<!-- SourceForge content begin -->
+<div style="padding-top: 10px; width: auto;">
+
+
+
+
+
+<form name="listPosts" method="post" action="https://forge.ogf.org/sf/discussion/do/listPosts/projects.ggf-editor/discussion.rec_ws_naming_specification.topc4057" id="listPosts"><INPUT type="HIDDEN" name="sfsubmit">
+<table class="ContainerWithBorder" cellpadding="0" cellspacing="0" width="100%" id="PostListTable">
+  <thead><tr class="ContainerHeader"><td colspan="2">
+    
+
+
+
+
+
+    Forum Topic - Should not use [MetaData] to identify resources:<span class="ItemCount">&nbsp;(5 Items)</span>
+  </td></tr></thead>
+
+   <tr>
+     <td width="100%" class="ContainerBodyWithBorder" colspan="2">
+       <table cellpadding="4" class="ItemDetailContainer">
+         <tr>
+           <td style="white-space:nowrap;">
+             View:&nbsp;<select name="pageSize" class="inputfield"><option value="10">10 Posts</option>
+               <option value="25" selected="selected">25 Posts</option>
+               <option value="50">50 Posts</option>
+               <option value="-1">All Posts</option></select>&nbsp;as&nbsp;<select name="viewStyle" class="inputfield"><option value="nested" selected="selected">Nested - by Reply</option>
+               <option value="flat">Flat - Chronological</option></select>
+           </td>
+           <td width="100%">
+             <div class="Button"><div class="Left">&nbsp;</div><div class="Middle"><a href="javascript:submitForm(document.listPosts, 'submit');">Update</a></div><div class="Right">&nbsp;</div></div>
+
+           </td>
+         </tr>
+       </table>
+     </td>
+   </tr>
+
+  <!-- BEGIN LIST OF POSTS -->
+  
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+<tr>
+  <td colspan="2" class="ItemDetailContainerCell" id="NestedPostListCell">
+    
+      
+      
+        
+        
+          <table class="DiscussionPost" id="post_post5817">
+            <tr>
+              <td class="MetaData" rowspan="3">
+                <div class="PostCreator"><a href="../../global/do/viewUser/hiro.html">Hiro Kishimoto</a></div>
+                <div class="PostDate">05/10/2007 7:16 PM</div>
+                <div class="PostId">post5817</div>
+              </td>
+
+              <td class="Post">
+                <div class="Title">Should not use [MetaData] to identify resources</div>
+                <div class="Content"><pre class="DiscussionText">It is in fact contained in the Web Services Addressing 1.0 specification itself:
+
+[[The Architecture of the World Wide Web, Volume One [AoWWW] recommends [AoWWW, Section 2] the use of URIs to identify 
+resources. Using abstract properties of an EPR other than [destination] to identify resources is contrary to this 
+recommendation. In certain circumstances, such a use of additional properties may be convenient or beneficial; however, 
+when building systems, the benefits or convenience of identifying a resource using reference parameters should be 
+carefully weighed against the benefits of identifying a resource solely by URI as explained in [AoWWW, Section 2.1] of 
+the Web Architecture.]]
+
+<a class="external" target="wikiext" href="http://www.w3.org/TR/ws-addr-core/#resourceidentification">http://www.w3.org/TR/ws-addr-core/#resourceidentification</a>
+
+Noah Mendelsohn, from the TAG, mentioned WS-Naming as a bad example during a workshop last February.
+
+Philippe Le Hegaret, W3C Architecture Domain Leader</pre>
+		  
+                  
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="Associations">
+                
+                <table style="margin-left: 2">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="PostButtons">
+                <div class="AlignRight">
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                  
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        
+      
+    
+      <div class="Thread">
+      
+        
+        
+          <table class="DiscussionPost" id="post_post5818">
+            <tr>
+              <td class="MetaData" rowspan="3">
+                <div class="PostCreator"><a href="../../global/do/viewUser/davesnelling.html">David Snelling</a></div>
+                <div class="PostDate">05/11/2007 5:07 AM</div>
+                <div class="PostId">post5818</div>
+              </td>
+
+              <td class="Post">
+                <div class="Title">Re: Should not use [MetaData] to identify resources</div>
+                <div class="Content"><pre class="DiscussionText">1) The WS-Naming[1] Endpoint Identifier (EPI) is a URI, actually IRI. This is consistent with the Architecture of the 
+World Wide Web, Volume One [2] Section 2, which recommends the use of URIs to identify resources.
+
+2) One option provided by WS-Naming Section 4.3 mandates that the wsa:Address field (mapped to the [destination] when 
+appearing in the message) possess the properties of an EPI, e.g. uniqueness in space and time WS-Naming Section 4.1. 
+This is a stronger requirement than normally placed on the wsa:Address but strongly aligned with the goals of the AoWWW 
+Section 2.2.
+
+3) The presence of IRIs in both the wsa:Address and the EPI in the EPR amounts to the association of aliases for the 
+resource. Aliases are indeed discouraged by the AoWWW Section 2.3.1, which reads.
+
+"Although there are benefits (such as naming flexibility) to URI aliases, there are also costs. URI aliases are harmful 
+when they divide the Web of related resources. A corollary of Metcalfe's Principle (the "network effect") is that the 
+value of a given resource can be measured by the number and value of other resources in its network neighborhood, that 
+is, the resources that link to it."
+
+The impact on the "network effect" caused by the two aliases is mitigated by the explicit association of these aliases 
+in the EPR.
+
+Actually, the aim of WS Naming is to prevent the creation of multiple aliases of equal (heavy) weight. The EPI is 
+intended as the single, persistent identifier of the resource. In WS Naming the wsa:Address is the (temporary) 
+destination of a messages intended for the resource identified by the EPI. Use cases of the WS-Naming working group 
+identify the unavoidable mobility of resources. The limitation that the wsa:Address of a resource is (in most general 
+practice) both the identity and the message destination means that, in the presence of mobility, aliases are inevitable.
+ It is one of the aims of WS-Naming to provide for persistent, unique identifiers for mobile resources.
+
+4) Note that WS-Naming says nothing about the use of ReferenceParamenters for identification, a practice we discourage, 
+as it splits the notion of identifier across two fields in the EPR.
+
+I hope this clarifies the position of the WS-Naming working group.
+
+[1] WS-Naming Public Comment Draft
+<a class="external" target="wikiext" href="http://www.ogf.org/Public_Comment_Docs/Documents/Jan-2007/draft-ogf-ws-naming-spec-006.pdf">http://www.ogf.org/Public_Comment_Docs/Documents/Jan-2007/draft-ogf-ws-naming-spec-006.pdf</a>
+
+[2] AoWWW
+<a class="external" target="wikiext" href="http://www.w3.org/TR/webarch/">http://www.w3.org/TR/webarch/</a>
+or
+<a class="external" target="wikiext" href="http://www.w3.org/TR/2004/REC-webarch-20041215/">http://www.w3.org/TR/2004/REC-webarch-20041215/</a>
+
+
+[3] WS-Addressing
+<a class="external" target="wikiext" href="http://www.w3.org/TR/ws-addr-core/">http://www.w3.org/TR/ws-addr-core/</a>
+or
+<a class="external" target="wikiext" href="http://www.w3.org/TR/2006/REC-ws-addr-core-20060509/">http://www.w3.org/TR/2006/REC-ws-addr-core-20060509/</a>
+</pre>
+		  
+                  
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="Associations">
+                
+                <table style="margin-left: 2">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="PostButtons">
+                <div class="AlignRight">
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                  
+                    
+                    <div class="ButtonSpace"></div>
+                  
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        
+      
+    
+      <div class="Thread">
+      
+        
+        
+          <table class="DiscussionPost" id="post_post5825">
+            <tr>
+              <td class="MetaData" rowspan="3">
+                <div class="PostCreator"><a href="../../global/do/viewUser/hiro.html">Hiro Kishimoto</a></div>
+                <div class="PostDate">05/22/2007 3:57 AM</div>
+                <div class="PostId">post5825</div>
+              </td>
+
+              <td class="Post">
+                <div class="Title">Re: Should not use [MetaData] to identify resources</div>
+                <div class="Content"><pre class="DiscussionText">On Fri, 2007-05-11 at 10:08 +0100, David Snelling wrote:
+&gt; &gt; Response:
+&gt; &gt; 
+&gt; &gt; 1) The WS-Naming[1] Endpoint Identifier (EPI) is a URI, actually IRI.  
+&gt; &gt; This is consistent with the Architecture of the World Wide Web,  
+&gt; &gt; Volume One [2] Section 2, which recommends the use of URIs to  
+&gt; &gt; identify resources.
+
+Correct, except that this identifier comes in addition to the
+[destination] property, which is specifically not recommend in
+WS-Addressing section 2.6: "Using abstract properties of an EPR other
+than [destination] to identify resources is contrary to this
+recommendation".
+
+&gt; &gt; 2) One option provided by WS-Naming Section 4.3 mandates that the  
+&gt; &gt; wsa:Address field (mapped to the [destination] when appearing in the  
+&gt; &gt; message) possess the properties of an EPI, e.g. uniqueness in space  
+&gt; &gt; and time WS-Naming Section 4.1. This is a stronger requirement than  
+&gt; &gt; normally placed on the wsa:Address but strongly aligned with the  
+&gt; &gt; goals of the AoWWW Section 2.2.
+
+The profile described in section 4.3 is indeed aligned with the
+WS-Addressing 1.0 specification, but that's not the case for the profile
+in section 4.1, which relies on information included in the metadata
+section.
+
+Regards,
+
+Philippe</pre>
+		  
+                  
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="Associations">
+                
+                <table style="margin-left: 2">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="PostButtons">
+                <div class="AlignRight">
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                  
+                    
+                    <div class="ButtonSpace"></div>
+                  
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        
+      
+    
+      <div class="Thread">
+      
+        
+        
+          <table class="DiscussionPost" id="post_post5826">
+            <tr>
+              <td class="MetaData" rowspan="3">
+                <div class="PostCreator"><a href="../../global/do/viewUser/hiro.html">Hiro Kishimoto</a></div>
+                <div class="PostDate">05/22/2007 3:57 AM</div>
+                <div class="PostId">post5826</div>
+              </td>
+
+              <td class="Post">
+                <div class="Title">Re: Should not use [MetaData] to identify resources</div>
+                <div class="Content"><pre class="DiscussionText">Philippe (and others),
+
+A few comments on this thread.
+
+First, keep in mind that we had a set of use cases and requirements that
+WS-Addressing alone did not satisfy. Thus, we used the WS-Addressing
+extensibility elements.
+
+Second, a "must" requirement for us was that our solution must not break
+existing tooling, i.e., an EPR that used WS-Naming extensions must be usable
+"as-is" by tools that do not understand the protocol. Given that 
+most (all?) current tooling assumes the address field is an http - if you
+put some other type of URI in the wsa:address field the tooling will choke
+and die.
+
+Third, let's be clear about semantics. Addresses and identities (names) are
+two different things. An address tells you how to talk to some thing - not
+what the thing is. A named (identified) thing may have many addresses over
+time - or in fact many at any given time. This is classic distributed
+systems - see all of the projects in the 80's and 90's, Sprite,
+Eden/Emerald, Clouds, ..... and so on.  The wsa:address is just that - an
+address - not an identifier. We wanted identifiers (abstract names, whatever
+you want to call them.) 
+
+Fourth, we wanted to be able to compare two EPR's. Given that the
+WS-Addressing specification explicitly states that there is no way to
+compare EPR's based on a canonical representation, we embedded meta data
+that can be used by WS-Naming aware clients to see if two EPR's refer to the
+same entity. Note that in section 2.3 of the WS-Addressing spec,
+"This specification provides no concept of endpoint identity and therefore
+does not provide any mechanism to determine equality or inequality of EPRs
+and does not specify the consequences of their equality or inequality.
+However, note that it is possible for other specifications to provide a
+comparison function that is applicable within a limited scope." 
+
+We need to determine if two EPR's refer to the same logical endpoint so that
+a client can make reasonable decisions regarding caching, whether the "same"
+entity was involved in an action, etc.
+
+
+This is EXACTLY what we have done.
+
+Similarly, also from section 2,
+"Flexible and dynamic exchange of endpoint information in tightly coupled
+environments where communicating parties share a set of common assumptions
+about specific policies or protocols that are used during the interaction."
+
+Fifth. Because one cannot assume that metadata is sent in SOAP headers EPR
+minters may choose to duplicate EPI information elsewhere, e.g., in the
+reference parameters - or in the wsa:address field itself. 
+
+
+Note: there is no section 2.6 in 
+<a class="external" target="wikiext" href="http://www.w3.org/TR/2005/CR-ws-addr-core-20050817/ws-addr-core.pdf">http://www.w3.org/TR/2005/CR-ws-addr-core-20050817/ws-addr-core.pdf</a>
+which is the version of the specification that (a) comes up when I google
+WS-Addressing, and (b) was current when we had our last round of discussions
+on this.
+
+Andrew</pre>
+		  
+                  
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="Associations">
+                
+                <table style="margin-left: 2">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="PostButtons">
+                <div class="AlignRight">
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                  
+                    
+                    <div class="ButtonSpace"></div>
+                  
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        
+      
+    
+      <div class="Thread">
+      
+        
+        
+          <table class="DiscussionPost" id="post_post5827">
+            <tr>
+              <td class="MetaData" rowspan="3">
+                <div class="PostCreator"><a href="../../global/do/viewUser/hiro.html">Hiro Kishimoto</a></div>
+                <div class="PostDate">05/22/2007 3:58 AM</div>
+                <div class="PostId">post5827</div>
+              </td>
+
+              <td class="Post">
+                <div class="Title">Re: Should not use [MetaData] to identify resources</div>
+                <div class="Content"><pre class="DiscussionText">Hi Andrew,
+
+I agree all of your comments except the final Note.
+
+&gt; Note: there is no section 2.6 in 
+&gt; <a class="external" target="wikiext" href="http://www.w3.org/TR/2005/CR-ws-addr-core-20050817/ws-addr-core.pdf">http://www.w3.org/TR/2005/CR-ws-addr-core-20050817/ws-addr-core.pdf</a>
+&gt; which is the version of the specification that (a) comes up when I google
+&gt; WS-Addressing, and (b) was current when we had our last round of discussions
+&gt; on this.
+
+Although your statement is true, the WS-naming specification normatively refers to "9 May 2006" version and it has 
+section 2.6.
+
+Hiro Kishimoto</pre>
+		  
+                  
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="Associations">
+                
+                <table style="margin-left: 2">
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
+                    
+                    
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="PostButtons">
+                <div class="AlignRight">
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                  
+                    
+                    <div class="ButtonSpace"></div>
+                  
+                  
+                  <div class="ButtonSpace"></div>
+                  
+                </div>
+              </td>
+            </tr>
+          </table>
+        
+      
+    
+
+    </div></div></div></div>
+  </td>
+</tr>
+
+    
+  
+
+  <!-- END LIST OF POSTS -->
+  <tr class="ContainerFooter">
+    <td colspan="2">
+      <div class="AlignLeft">
+        
+      </div>
+      <div class="ButtonSpace"></div>
+    </td>
+  </tr>
+</table>
+</form>
+
+<br />
+
+<div class="AlignRight">
+  <div class="Button"><div class="Left">&nbsp;</div><div class="Middle"><a href="../../discussion/do/listTopics/projects.ggf-editor/discussion-44.html">Return</a></div><div class="Right">&nbsp;</div></div>
+
+  <div class="ButtonSpace"></div>
+  
+</div>
+
+</div>
+<!-- SourceForge content end -->
+
+</div>
+<!-- SourceForge content-area end -->
+
+<div id="PageLoaded" style="display: none;"></div>
+
+
+<!-- forge.gridforum.org footer.html -->
+<br> <hr>
+<table width='100%'> 
+ <tr>
+  <td align='left'>   <a href='http://www.ogf.org/' target='_blank' style='border: 0 px;'><img src='../../../ogf-it/opengridforum.gif' alt='The Open Grid Forum' style='border:0px white solid;'></a><td>
+  <td align='center'> <a href='mailto:webmaster@ogf.org'>Contact Webmaster</a> 
+                    | <a href="../../tracker/do/createArtifact/projects.ggf-info/tracker.html">Report a problem</a>
+                    | <a href="../../wiki/do/viewPage/projects.ggf-info/wiki/HomePage.html">GridForge Help</a>
+                    </td>
+  <td align='right'>  
+<!--		<img src='/ogf-it/powered_by_dell.gif' alt='Powered by Dell'> -->
+<!-- Begin DigiCert/ClickID site seal HTML and JavaScript -->
+<div id="DigiCertClickID_sxSDRU4L">
+  <a href="http://www.digicert.com/">SSL Certificates</a>
+</div>
+<script type="text/javascript">
+var __dcid = __dcid || [];__dcid.push(["DigiCertClickID_sxSDRU4L", "10", "m", "black", "sxSDRU4L"]);(function(){var cid=document.createElement("script");cid.type="text/javascript";cid.async=true;cid.src=("https:" === document.location.protocol ? "https://" : "http://")+"seal.digicert.com/seals/cascade/seal.min.js";var s = document.getElementsByTagName("script");var ls = s[(s.length - 1)];ls.parentNode.insertBefore(cid, ls.nextSibling);}());
+</script>
+<!-- End DigiCert/ClickID site seal HTML and JavaScript -->
+  </td>
+ </tr>
+</table>
+<!-- google analytics code -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6775861-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+
+This is a static archive of the previous Open Grid Forum GridForge content management system saved from host forge.ogf.org file /sf/go/projects.ggf-editor/discussion.rec_ws_naming_specification.topc4057 at Sun, 06 Nov 2022 09:02:56 GMT
+</html>

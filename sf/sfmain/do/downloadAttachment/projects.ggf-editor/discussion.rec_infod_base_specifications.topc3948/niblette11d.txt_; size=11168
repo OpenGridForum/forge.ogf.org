@@ -1,0 +1,256 @@
+Background - Comparison of WS-Notification and INFOD
+====================================================
+
+Both WSN and INFOD are concerned with the distribution of Notification
+(Event) Messages from Publishers to Consumers. However there is a 
+difference in the "pattern" used to relate these participants.
+
+WS-Notification describes two such patterns
+
+i) The Direct Notification pattern, where the subscriber sends 
+subscribe requests directly to the Publisher (in WS-Notification terms 
+the Publisher is also the NotificationProducer)
+
+ii) The Brokered pattern where subscribe requests are sent to a 
+NotificationBroker, distinct from the Publisher. The 
+NotificationBroker holds publisher and subscription details and also 
+acts as an intermediary for the actual NotificationMessages, i.e. each 
+such message flows from the Publisher to the broker, and from there to 
+all the relevant Consumers.
+
+INFOD uses a third (complementary) pattern. In the INFOD pattern 
+subscribe requests are again sent to a third party (the Registry) 
+which holds publisher and subscription details, but does not directly 
+interpose itself in the flow of Notification Messages between 
+Publisher and Consumer(s).
+Instead it makes each Publisher aware of the addresses of those 
+Consumers and leaves the Publishers to do the actual sending of the 
+Notification Messages. Much of the INFOD specification is concerned 
+with the interface to this Registry.
+
+Unlike WSN, INFOD provides a mechanism for registering Subscribers, 
+indeed it requires Subscribers to be registered before they can create 
+subscriptions.
+
+INFOD subscriptions differ from WS-Notification ones.
+
+a) They can have a name and description, which is intended to be 
+meaningful to humans
+
+b) They don't directly reference Publishers, but they can contain 
+PropertyConstraints which are used to match against the properties of 
+registered publishers. In the WSN direct case there is only one 
+publisher, in the WSN brokered case then the ProducerProperty filter 
+provides something similar to this.
+
+c) They can contain properties of their own, used to match against 
+publisher requirements (i.e. the matching of properties is symmetrical 
+unlike in WSN where it is subscription matching against publisher 
+only)
+
+d) They contain both DataConstraints and DynamicConsumerConstraints 
+which allow filtering on message content. This looks similar to the 
+WSN Message and Topic filters.
+
+
+
+Comments - Positioning of INFOD relative to WS-Notification
+===========================================================
+
+1.  The abstract states that WS-Notification just provides a basic 
+topic-based pub/sub pattern, and that INFOD extends this by allowing 
+content-based subscription. This isn't entirely true, since WS-N also 
+provides for content-based subscription (and indeed doesn't actually 
+require the use of Topics).
+
+2. Figure 2 uses the word "Notification" to show the Registry 
+informing the Publisher of a change of its state, but does not use the 
+word "Notification" to describe the messages that flow between the 
+Publisher and Consumer. Readers might equate "Notification" with 
+WS-Notification, but  I think the intention of section 3.1 is that 
+WS-Notification's Notify message is used for both flows.
+
+3. The description of Data Vocabularies looks as though it is intended 
+to layer on top of other mechanisms, such as WS-Topics. If this is so, 
+it would be worth showing an example of how this is would work.
+
+4. There seems to be scope for greater alignment with WS-Notification 
+concepts? Examples
+
+a) making INFOD subscription entities look like extensions of WSN ones
+
+b) making INFOD publisher entities look like extensions of 
+WS-BrokeredNotification publisher registrations?
+
+
+
+Comments - INFOD usage of WS-Notification (sections 1.9 and 3.1)
+================================================================
+
+1.  Is the notify really a notification of a state change of the 
+registry, or is it a directive to the publisher to send a message, or 
+a directive to the publisher to change its list of consumers? In the 
+latter case it could be modelled as a WSN subscribe on the publisher. 
+Does the registry need to know when the publishers have reacted to the 
+state change? In which case it can't use WSN Notify since that is only 
+a one-way exchange.
+
+Assuming that you are going to make the INFOD notify interface into a 
+specialization of the WSN NotificationConsumer interface, then there 
+are a number of other points to address
+
+2. Line 257 says "the interfaces MUST be called using a request-reply 
+message" (I think this means a "message exchange" ). The WSN-defined 
+Notify message exchange is a one-way, not a request-reply.  then you 
+need to change this sentence to say that it applies only to the 
+registry interface.
+
+3. The schema for the Notify message should change to use the wsn 
+namespace; the usage of SubscriptionReference, Topic and 
+ProducerReference should match that defined by WSN; and the message 
+should use the WSN Action URI.
+
+4. Should update the BaseN reference to point to the committee spec - 
+http://docs.oasis-open.org/wsn/wsn-ws_base_notification-1.3-sp
+ec-cs-01.pdf
+
+Further questions
+
+5. Could you use WS-N PullPoints as a polling method, in cases where 
+the publishers can't be notified. The getMetaData approach seems to 
+leave some work for the publisher to do to figure out what it's 
+supposed to do? I wasn't clear how the registry knows whether to 
+deliver notifications to the publisher, or whether the publisher is 
+going to poll (the pullpoints approach would resolve this as in the 
+polling case, all the publisher does is supply a pullpoint EPR instead 
+of its own EPR).
+
+6. On receipt of the notify, does the producer send just one message 
+to each consumer, or does it send multiple? I think multiple, but it 
+wasn't clear to me.
+
+
+
+Other comments
+==============
+
+1.1.2. Data Vocabularies. Figure 3 distinguishes between Property 
+Vocabulary and Property Vocabulary Instances, but there is no Data 
+Vocabulary Instance.. why is this?
+
+1.1.5 Shouldn't fig 3 show a reference from an entity to a Property 
+Vocab Instance (as set up by
+CreatePropertyVocabularyInstance) rather than to a Property Vocab?
+
+1.1.5 Are Data Vocabularies associatable with anything other than 
+Publishers?
+
+1.3 Lifetime management. If WSRF-RL is being used to manage lifetime, 
+why not use WSRF-RP to be able to create/read/write the contents of 
+the entities?
+
+1.5 Relationship between state transitions, events and messages is 
+unclear.
+Is there always a 1-1 correspondence between them all, or can you have 
+events that don't correspond to any state transition. How much of this 
+is actually relevant to the INFOD spec (in WSN we said that all of 
+this was out of scope)?
+
+1.5 Line 164 (description of Property Vocabs) has a typo where. It 
+refers to Data Vocabularies when it means Property Vocabularies.
+
+1.5 Line 157. I can understand how you can associate a property 
+vocabulary instance with an Entity, but what does it mean to associate 
+on with a Vocabulary Association?
+
+1.5 Line 174. What does it mean to say that a Publisher delivers 
+messages unconditionally? Does this mean that they go to all 
+registered consumers, regardless of what the consumers' subscriptions 
+say?
+
+1.5 Line 187. Use of the word "entity" here in a way that isn't 
+consistent with the definition in line 143.
+
+1.5 Line 209 says that a Vocab Association is between a Vocab and a 
+Publisher, but Fig 3 shows it being between a Vocab and any kind of 
+entity.
+
+1.6 Line 215 says that you are using RFC 2119. There are several cases 
+where lower case "optional" is being used in a manner that doesn't 
+comply with RFC 2119.
+
+1.6 Line 217 talks about types for attributes. I think you are using a 
+similar convention for element types.
+
+1.7 Line 244 lists a namespace for WSRF-RP, but I couldn't see it used 
+anywhere (however see my earlier comment suggesting that you might 
+want to use it).
+
+1.9 Lines 257- 263 seem to be restating rules of WS-Addressing and its 
+bindings. Are you trying to say anything different from those specs? 
+If you aren't then I would suggest that these lines aren't needed. If 
+you are going to include them, then in point 2 it's HTTP that has the 
+built-in reply address, not SOAP. Also I don't understand the 
+difference between points 1 and 3.
+
+2.1 Line 276, the MUST seems a bit heavy, are you saying that there's 
+no way that people can use alternatives to these operations in special 
+circumstances? Also are you allowed to use WSRF-RL destroy as an 
+alternative to drop?
+
+2.1 Line 283 "the publisher has to identify subscriptions and 
+consumers that match..." I thought the registry did that for the 
+publisher.
+
+2.1 Lines 304/305. These lines are using real XML Schema, not the 
+pseudo-schema conventions.
+
+2.1.2 ReplacePublisher. Why do you put the EPR of the entity to be 
+replaced into the body of the message, instead of just have that 
+resource be the target of the message itself (same comment for all the 
+other Replace and Drop requests)?
+
+2.3.1 CreateConsumer. Line 731 talks about "the corresponding 
+subscription". Can't there be more than one corresponding 
+subscriptions?
+
+2.4.1 CreateSubscription. Line 939, use of MAY doesn't conform to RFC 
+2119.
+
+2.4.1 Create Subscription. What is the difference between 
+DataConstraints and DynamicConsumerConstraints? Also the descriptions 
+of both talk about a vocabulary EPR. Is this a Data Vocabulary? How do 
+I describe the constraint language used to express these constraints.. 
+is it entirely determined by the Vocabulary. In WSN a particular 
+"vocabulary" allows a choice of dialects you can use to express your 
+filter on the subscribe request,
+
+2.4.3 Drop Subscription. What exactly counts as a reference to a 
+subscription? Does the fact that a publisher thinks it is sending to a 
+consumer under the aegis of a given subscription count as a reference? 
+If so then does "CASCADE"
+cause such publishers to be removed?
+
+2.5 Managing Vocabularies. Line 1183 talks about Assocations having 
+properties, I couldn't find this explained anywhere.
+
+2.5.1 RegisterPropertyVocabulary, line 1217. If the vocab is required 
+to be an XML schema, why doesn't infod:VocabularyBody contain an 
+xsd:schema element to enforce this?
+
+2.5.4.RegisterDataVocabulary. Back at line 1193 you say that the 
+Registry merely contains a pointer to the Data Vocab, and the material 
+in that vocab is held elsewhere. Yet 1400 seems to imply passing a 
+string representation of the vocabulary into the registry. Is this 
+intended to be passing just a reference, or is it the actual data?
+
+2.6. How does a subscription get to reference a Data Vocabulary. Do 
+you use AssociateVocabulary or is that only for associating 
+publishers?
+
+2.6.1 Line 1497 talks about an AssociateEntity operations which no 
+longer seems to exist.
+
+
+Peter Niblett
+IBM Senior Technical Staff Member
