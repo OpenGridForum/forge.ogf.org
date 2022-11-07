@@ -395,12 +395,12 @@ Invalid SQL
 
 Property Transfers use the following to pull out the DRAN:
 
-declare namespace wsdai='http://www.ggf.org/namespaces/2005/12/WS-DAI';
+declare namespace wsdai='https://www.ogf.org/namespaces/2005/12/WS-DAI';
 (//wsdai:DataResourceAbstractName)
 
 I had to change this to:
 
-declare namespace wsdai='http://www.ggf.org/namespaces/2005/12/WS-DAI/';
+declare namespace wsdai='https://www.ogf.org/namespaces/2005/12/WS-DAI/';
 (//wsdai:DataResourceAbstractName)
 
 Note the final "/". Otherwise the transferred value would be [null].
@@ -452,13 +452,13 @@ SQLExecute
  14:11:03,944 ERROR [SoapUITestCaseRunner] java.lang.Exception: Schema
  Compliance in [INSERT] failed; [line 7: Invalid xsi:type qname:
  'xsd:int' in element
- SQLDataset@http://www.ggf.org/namespaces/2005/12/WS-DAIR] Status:
+ SQLDataset@https://www.ogf.org/namespaces/2005/12/WS-DAIR] Status:
  FAILED 
 
- &lt;SQLExecuteResponse xmlns="http://www.ggf.org/namespaces/2005/12/WS-DAIR"&gt;
+ &lt;SQLExecuteResponse xmlns="https://www.ogf.org/namespaces/2005/12/WS-DAIR"&gt;
     &lt;SQLDataset&gt;
-       &lt;ns1:DatasetFormatURI xmlns:ns1="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;http://java.sun.com/xml/ns/jdbc&lt;/ns1:DatasetFormatURI&gt;
-       &lt;ns2:DatasetData xmlns:ns2="http://www.ggf.org/namespaces/2005/12/WS-DAI"/&gt;
+       &lt;ns1:DatasetFormatURI xmlns:ns1="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;http://java.sun.com/xml/ns/jdbc&lt;/ns1:DatasetFormatURI&gt;
+       &lt;ns2:DatasetData xmlns:ns2="https://www.ogf.org/namespaces/2005/12/WS-DAI"/&gt;
        &lt;SQLUpdateCount xsi:type="xsd:int"&gt;1&lt;/SQLUpdateCount&gt;
     &lt;/SQLDataset&gt;
  &lt;/SQLExecuteResponse&gt;
@@ -683,11 +683,11 @@ SQLRowSetFactory
          &lt;ws:Position&gt;0&lt;/ws:Position&gt;
       &lt;/ws:SQLRowsetFactoryRequest&gt;
 
-      &lt;GetSQLRowsetFactoryResponse xmlns="http://www.ggf.org/namespaces/2005/12/WS-DAIR"&gt;
-         &lt;ns1:DataResourceAddress xsi:type="ns1:DataResourceAddressType" xmlns:ns1="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
+      &lt;GetSQLRowsetFactoryResponse xmlns="https://www.ogf.org/namespaces/2005/12/WS-DAIR"&gt;
+         &lt;ns1:DataResourceAddress xsi:type="ns1:DataResourceAddressType" xmlns:ns1="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
             &lt;ns2:Address xmlns:ns2="http://www.w3.org/2005/08/addressing"&gt;http://daiserver.epcc.ed.ac.uk:20300/dai/services/RowsetServiceRowsetPT&lt;/ns2:Address&gt;
             &lt;ns3:ReferenceParameters xmlns:ns3="http://www.w3.org/2005/08/addressing"&gt;
-               &lt;ns4:DataResourceAbstractName xmlns:ns4="http://www.ggf.org/namespaces/2005/12/WS-DAI/"&gt;wsdai:ogsadai-120af394575&lt;/ns4:DataResourceAbstractName&gt;
+               &lt;ns4:DataResourceAbstractName xmlns:ns4="https://www.ogf.org/namespaces/2005/12/WS-DAI/"&gt;wsdai:ogsadai-120af394575&lt;/ns4:DataResourceAbstractName&gt;
             &lt;/ns3:ReferenceParameters&gt;
          &lt;/ns1:DataResourceAddress&gt;
       &lt;/GetSQLRowsetFactoryResponse&gt;
@@ -813,39 +813,39 @@ GetDataResourcePropertyDocument TestCase
  
  Problem with the implementation? the test? What does the spec say?
 
-&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
+&lt;soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
    &lt;soapenv:Body&gt;
-      &lt;PropertyDocument xmlns="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
+      &lt;PropertyDocument xmlns="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
          &lt;DataResourceAbstractName&gt;wsdai:ogsadai-120af3941ba&lt;/DataResourceAbstractName&gt;
          &lt;DataResourceManagement&gt;ServiceManaged&lt;/DataResourceManagement&gt;
          &lt;ParentDataResource&gt;
             &lt;ns1:Address xmlns:ns1="http://www.w3.org/2005/08/addressing"&gt;http://daiserver.epcc.ed.ac.uk:20300/dai/services/AccessServiceAccessFactoryPT&lt;/ns1:Address&gt;
             &lt;ns2:ReferenceParameters xmlns:ns2="http://www.w3.org/2005/08/addressing"&gt;
-               &lt;ns3:DataResourceAbstractName xmlns:ns3="http://www.ggf.org/namespaces/2005/12/WS-DAI/"&gt;wsdai:BookDB&lt;/ns3:DataResourceAbstractName&gt;
+               &lt;ns3:DataResourceAbstractName xmlns:ns3="https://www.ogf.org/namespaces/2005/12/WS-DAI/"&gt;wsdai:BookDB&lt;/ns3:DataResourceAbstractName&gt;
             &lt;/ns2:ReferenceParameters&gt;
          &lt;/ParentDataResource&gt;
-         &lt;DatasetMap xsi:type="ns4:DatasetMapType" xmlns:ns4="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
-            &lt;ns4:MessageQName xmlns:ns5="http://www.ggf.org/namespaces/2005/12/WS-DAIR/"&gt;ns5:GetSQLResponseItem&lt;/ns4:MessageQName&gt;
+         &lt;DatasetMap xsi:type="ns4:DatasetMapType" xmlns:ns4="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
+            &lt;ns4:MessageQName xmlns:ns5="https://www.ogf.org/namespaces/2005/12/WS-DAIR/"&gt;ns5:GetSQLResponseItem&lt;/ns4:MessageQName&gt;
             &lt;ns4:DatasetFormatURI&gt;http://java.sun.com/xml/ns/jdbc&lt;/ns4:DatasetFormatURI&gt;
          &lt;/DatasetMap&gt;
-         &lt;DatasetMap xsi:type="ns6:DatasetMapType" xmlns:ns6="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
-            &lt;ns6:MessageQName xmlns:ns7="http://www.ggf.org/namespaces/2005/12/WS-DAIR/"&gt;ns7:GetSQLResponseItem&lt;/ns6:MessageQName&gt;
+         &lt;DatasetMap xsi:type="ns6:DatasetMapType" xmlns:ns6="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
+            &lt;ns6:MessageQName xmlns:ns7="https://www.ogf.org/namespaces/2005/12/WS-DAIR/"&gt;ns7:GetSQLResponseItem&lt;/ns6:MessageQName&gt;
             &lt;ns6:DatasetFormatURI&gt;http://ogsadai.org.uk/data/csv&lt;/ns6:DatasetFormatURI&gt;
          &lt;/DatasetMap&gt;
-         &lt;DatasetMap xsi:type="ns8:DatasetMapType" xmlns:ns8="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
-            &lt;ns8:MessageQName xmlns:ns9="http://www.ggf.org/namespaces/2005/12/WS-DAIR/"&gt;ns9:GetSQLRowset&lt;/ns8:MessageQName&gt;
+         &lt;DatasetMap xsi:type="ns8:DatasetMapType" xmlns:ns8="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
+            &lt;ns8:MessageQName xmlns:ns9="https://www.ogf.org/namespaces/2005/12/WS-DAIR/"&gt;ns9:GetSQLRowset&lt;/ns8:MessageQName&gt;
             &lt;ns8:DatasetFormatURI&gt;http://java.sun.com/xml/ns/jdbc&lt;/ns8:DatasetFormatURI&gt;
          &lt;/DatasetMap&gt;
-         &lt;DatasetMap xsi:type="ns10:DatasetMapType" xmlns:ns10="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
-            &lt;ns10:MessageQName xmlns:ns11="http://www.ggf.org/namespaces/2005/12/WS-DAIR/"&gt;ns11:GetSQLRowset&lt;/ns10:MessageQName&gt;
+         &lt;DatasetMap xsi:type="ns10:DatasetMapType" xmlns:ns10="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
+            &lt;ns10:MessageQName xmlns:ns11="https://www.ogf.org/namespaces/2005/12/WS-DAIR/"&gt;ns11:GetSQLRowset&lt;/ns10:MessageQName&gt;
             &lt;ns10:DatasetFormatURI&gt;http://ogsadai.org.uk/data/csv&lt;/ns10:DatasetFormatURI&gt;
          &lt;/DatasetMap&gt;
-         &lt;ConfigurationMap xsi:type="ns12:ConfigurationMapType" xmlns:ns12="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
-            &lt;ns12:MessageQName xmlns:ns13="http://www.ggf.org/namespaces/2005/12/WS-DAIR/"&gt;ns13:SQLRowsetFactory&lt;/ns12:MessageQName&gt;
-            &lt;ns12:PortTypeQName xmlns:ns14="http://www.ggf.org/namespaces/2005/12/WS-DAIR/"&gt;ns14:SQLRowsetPT&lt;/ns12:PortTypeQName&gt;
-            &lt;ns12:ConfigurationDocumentQName xmlns:ns15="http://www.ggf.org/namespaces/2005/12/WS-DAIR/"&gt;ns15:SQLRowsetConfigurationDocumentType&lt;/ns12:ConfigurationDocumentQName&gt;
+         &lt;ConfigurationMap xsi:type="ns12:ConfigurationMapType" xmlns:ns12="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
+            &lt;ns12:MessageQName xmlns:ns13="https://www.ogf.org/namespaces/2005/12/WS-DAIR/"&gt;ns13:SQLRowsetFactory&lt;/ns12:MessageQName&gt;
+            &lt;ns12:PortTypeQName xmlns:ns14="https://www.ogf.org/namespaces/2005/12/WS-DAIR/"&gt;ns14:SQLRowsetPT&lt;/ns12:PortTypeQName&gt;
+            &lt;ns12:ConfigurationDocumentQName xmlns:ns15="https://www.ogf.org/namespaces/2005/12/WS-DAIR/"&gt;ns15:SQLRowsetConfigurationDocumentType&lt;/ns12:ConfigurationDocumentQName&gt;
             &lt;DefaultConfigurationDocument xmlns=""&gt;
-               &lt;ns12:ConfigurationDocument xsi:type="ns16:SQLRowsetConfigurationDocumentType" xmlns:ns16="http://www.ggf.org/namespaces/2005/12/WS-DAIR"&gt;
+               &lt;ns12:ConfigurationDocument xsi:type="ns16:SQLRowsetConfigurationDocumentType" xmlns:ns16="https://www.ogf.org/namespaces/2005/12/WS-DAIR"&gt;
                   &lt;ns12:Readable&gt;true&lt;/ns12:Readable&gt;
                   &lt;ns12:Writeable&gt;false&lt;/ns12:Writeable&gt;
                   &lt;ns12:TransactionInitiation&gt;NotSupported&lt;/ns12:TransactionInitiation&gt;

@@ -243,8 +243,8 @@ This is a static archive of the previous Open Grid Forum GridForge content manag
 </p>
 <pre>
 &lt;SQLExecute xmlns=""&gt;
-  &lt;ns1:SQLExecuteRequest xmlns:ns1="http://www.ggf.org/namespaces/2005/12/WS-DAIR"&gt;
-    &lt;ns2:DataResourceAbstractName xmlns:ns2="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
+  &lt;ns1:SQLExecuteRequest xmlns:ns1="https://www.ogf.org/namespaces/2005/12/WS-DAIR"&gt;
+    &lt;ns2:DataResourceAbstractName xmlns:ns2="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
       wsdai:BookDB
     &lt;/ns2:DataResourceAbstractName&gt;
     &lt;ns1:SQLExpression&gt;
@@ -258,8 +258,8 @@ This is a static archive of the previous Open Grid Forum GridForge content manag
 OGSA-DAI WS-DAIR and document/literal
 <pre>
 &lt;SQLExecuteRequest
-    xmlns="http://www.ggf.org/namespaces/2005/12/WS-DAIR"&gt;
-  &lt;ns1:DataResourceAbstractName xmlns:ns1="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
+    xmlns="https://www.ogf.org/namespaces/2005/12/WS-DAIR"&gt;
+  &lt;ns1:DataResourceAbstractName xmlns:ns1="https://www.ogf.org/namespaces/2005/12/WS-DAI"&gt;
     wsdai:BookDB
   &lt;/ns1:DataResourceAbstractName&gt;
   &lt;SQLExpression&gt;
@@ -283,7 +283,7 @@ AMGA WS-DAIR and document/literal
 AMGA reported that OGSA-DAI client to AMGA (rpc/literal) server failed due to <tt>&lt;SQLExecute xmlns=&quot;&quot;&gt;</tt> but was OK 
 with
 <pre>
-&lt;SQLExecute xmlns="http://www.ggf.org/namespaces/2005/12/WS-DAIR"&gt;
+&lt;SQLExecute xmlns="https://www.ogf.org/namespaces/2005/12/WS-DAIR"&gt;
 </pre>
 
 The namespace declaration xmlns=&quot;&quot; is wrong in Mike's view.
@@ -318,11 +318,11 @@ On wire:
 <pre>
 &lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://www.w3.org/2005/08/addressing" 
-xmlns:wrs="http://java.sun.com/xml/ns/jdbc" xmlns:ns1="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLAccess" 
-xmlns:ns2="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLAccessFactory" xmlns:ns3="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLResponse" 
-xmlns:ns4="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLResponseFactory" xmlns:ns5="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLRowset" 
-xmlns:wsdair="http://www.ggf.org/namespaces/2005/12/WS-DAIR" xmlns:ns6="http://www.ggf.org/namespaces/2005/12/WS-DAIR/CoreDataAccess" 
-xmlns:ns7="http://www.ggf.org/namespaces/2005/12/WS-DAIR/CoreResourceList" xmlns:wsdai="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
+xmlns:wrs="http://java.sun.com/xml/ns/jdbc" xmlns:ns1="https://www.ogf.org/namespaces/2005/12/WS-DAIR/SQLAccess" 
+xmlns:ns2="https://www.ogf.org/namespaces/2005/12/WS-DAIR/SQLAccessFactory" xmlns:ns3="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLResponse" 
+xmlns:ns4="https://www.ogf.org/namespaces/2005/12/WS-DAIR/SQLResponseFactory" xmlns:ns5="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLRowset" 
+xmlns:wsdair="https://www.ogf.org/namespaces/2005/12/WS-DAIR" xmlns:ns6="http://www.ggf.org/namespaces/2005/12/WS-DAIR/CoreDataAccess" 
+xmlns:ns7="https://www.ogf.org/namespaces/2005/12/WS-DAIR/CoreResourceList" xmlns:wsdai="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
 &lt;SOAP-ENV:Body&gt;
 &lt;wsdai:GetResourceListResponse&gt;
 &lt;/wsdai:GetResourceListResponse&gt;
@@ -348,11 +348,11 @@ On wire:
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsa="http://www.w3.org/2005/08/addressing" 
-xmlns:wrs="http://java.sun.com/xml/ns/jdbc" xmlns:ns1="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLAccess" 
-xmlns:ns2="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLAccessFactory" xmlns:ns3="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLResponse" 
-xmlns:ns4="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLResponseFactory" xmlns:ns5="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLRowset" 
-xmlns:wsdair="http://www.ggf.org/namespaces/2005/12/WS-DAIR" xmlns:ns6="http://www.ggf.org/namespaces/2005/12/WS-DAIR/CoreDataAccess" 
-xmlns:ns7="http://www.ggf.org/namespaces/2005/12/WS-DAIR/CoreResourceList" xmlns:wsdai="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
+xmlns:wrs="http://java.sun.com/xml/ns/jdbc" xmlns:ns1="https://www.ogf.org/namespaces/2005/12/WS-DAIR/SQLAccess" 
+xmlns:ns2="https://www.ogf.org/namespaces/2005/12/WS-DAIR/SQLAccessFactory" xmlns:ns3="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLResponse" 
+xmlns:ns4="https://www.ogf.org/namespaces/2005/12/WS-DAIR/SQLResponseFactory" xmlns:ns5="http://www.ggf.org/namespaces/2005/12/WS-DAIR/SQLRowset" 
+xmlns:wsdair="https://www.ogf.org/namespaces/2005/12/WS-DAIR" xmlns:ns6="http://www.ggf.org/namespaces/2005/12/WS-DAIR/CoreDataAccess" 
+xmlns:ns7="https://www.ogf.org/namespaces/2005/12/WS-DAIR/CoreResourceList" xmlns:wsdai="http://www.ggf.org/namespaces/2005/12/WS-DAI"&gt;
 &lt;SOAP-ENV:Body&gt;
 &lt;wsdair:SQLPropertyDocument xsi:type="wsdair:SQLPropertyDocumentType"&gt;
 &lt;wsdai:DataResourceAbstractName&gt;Metadata&lt;/wsdai:DataResourceAbstractName&gt;
